@@ -25,7 +25,6 @@ import java.util.Calendar;
 
 public class WeatherHistory extends AppCompatActivity {
     Typeface weatherFont;
-    private int mYear, mMonth, mDay;
     TextView cityField;
     TextView selecteddate;
     TextView detailsField;
@@ -84,12 +83,11 @@ public class WeatherHistory extends AppCompatActivity {
         }
         return false;
     }
-    public void showInputDialog(){
+    public void showInputDialog(){ //*date picker hier selecteerd u de datum
         final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-        final int input2 = mMonth + mDay +mYear;
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog dpd = new DatePickerDialog(this,
                 new DatePickerDialog.OnDateSetListener() {
@@ -97,14 +95,10 @@ public class WeatherHistory extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year,
                                           int monthOfYear, int dayOfMonth) {
-                        changeDate(input2);
-
+                        Toast.makeText(getApplicationContext(),dayOfMonth+"/"+monthOfYear+"/"+year,Toast.LENGTH_SHORT).show();
                     }
                 }, mYear, mMonth, mDay);
         dpd.show();
-    }
-
-    public void changeDate(int date_unix){
     }
 
     public void showInputDialog2(){

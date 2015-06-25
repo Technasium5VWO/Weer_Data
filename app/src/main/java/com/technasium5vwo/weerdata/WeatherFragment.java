@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class WeatherFragment extends Fragment {
     Typeface weatherFont;
      
@@ -52,10 +51,11 @@ public class WeatherFragment extends Fragment {
 	    //weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/weather.ttf");     
 	    weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "weather.ttf");     
 	    updateWeatherData(new CityPreference(getActivity()).getCity());
-	}
-     
-	
-	private void updateWeatherData(final String city){
+    }
+
+
+
+    private void updateWeatherData(final String city){
 	    new Thread(){
 	        public void run(){
 	            final JSONObject json = RemoteFetch.getJSON(getActivity(), city);
