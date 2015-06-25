@@ -89,6 +89,7 @@ public class WeatherHistory extends AppCompatActivity {
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
+        final int input2 = mMonth + mDay +mYear;
 
         DatePickerDialog dpd = new DatePickerDialog(this,
                 new DatePickerDialog.OnDateSetListener() {
@@ -96,14 +97,14 @@ public class WeatherHistory extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year,
                                           int monthOfYear, int dayOfMonth) {
-                        changeDate();
+                        changeDate(input2);
+
                     }
                 }, mYear, mMonth, mDay);
         dpd.show();
     }
 
-    public void changeDate(String date){
-
+    public void changeDate(int date_unix){
     }
 
     public void showInputDialog2(){

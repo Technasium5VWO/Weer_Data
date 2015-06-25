@@ -12,10 +12,10 @@ import java.net.URL;
 
 public class HistoricalPull {
     private static final String OPEN_WEATHER_MAP_API_HISTORY =
-            "http://api.openweathermap.org/data/2.5/history/city?q=%s&units=metric";
-    public static JSONObject getJSON(Context context, String city){
+            "http://api.openweathermap.org/data/2.5/history/city?q={city ID},{country code}&type=hour&start={start}&end={end}";
+    public static JSONObject getJSON(Context context, String city, String date){
         try {
-            URL url = new URL(String.format(OPEN_WEATHER_MAP_API_HISTORY, city));
+            URL url = new URL(String.format(OPEN_WEATHER_MAP_API_HISTORY, city, date));
             HttpURLConnection connection =
                     (HttpURLConnection)url.openConnection();
 
