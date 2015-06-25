@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Weer Data</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="change_city">kies andere stad</string>
+    <string name="change_date">verander datum</string>
+    <string name="HW">Historisch weer</string>
+
+    <string name="open_weather_maps_app_id">9c54850a063beebdfd39d1b3cb03d68a</string>
+
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_thunder">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+
+    <string name="place_not_found">Sorry, geen data gevonden!</string>
+    <string name="actweer">Actueel weer</string>
+    <string name="title_activity_weather_history">WeatherHistory</string>
+</resources>
